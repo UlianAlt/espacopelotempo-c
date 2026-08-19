@@ -17,3 +17,5 @@ jobs:
       run: gcc teste_espacopelotempo.c -o test_espacopelotempo -lm
     - name: execute
       run: ./test_espacopelotempo
+    - name: mostrar o conteúdo do arquivo criado
+      run: cat espacopelotempo.txt
