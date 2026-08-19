@@ -15,14 +15,17 @@ jobs:
     - uses: actions/checkout@v4
 
     
+    - name: compile_test
+      run: gcc teste_espacopelotempo.c -o test_espacopelotempo -lm
+
     - name: compile
-      run: gcc teste_espacopelotempo.c -o test_espacopelotempo -lm && gcc espacopelotempo.c -o espacopelotempo -lm
+      run:  gcc espacopelotempo.c -o espacopelotempo -lm
 
     - name: execute_test
       run: ./test_espacopelotempo
       
     - name: execute
-      run: ./espacopelotempo
+      run: ./espacopelotempo 40 2
       
     - name: mostrar o conteúdo do arquivo criado
       run: cat espacopelotempo.txt
